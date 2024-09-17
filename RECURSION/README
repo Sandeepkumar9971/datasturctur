@@ -1,0 +1,25 @@
+// what is recursion
+// there are two type of recursion funcation
+// a. indirect recursion
+// b. direct recursion
+
+// a. direct recursion
+// example 
+// call the in funcation inside of  same funcation 
+// cosnt first = () =>{
+    // console.log('this is first funvtipn)
+    // first()
+// }
+
+
+// b. indirect funcation
+//  call second funcation in first funcation for related output
+ 
+// cosnt  = () =>{
+//     console.log('this is fist function')
+//     sec()
+// }
+
+// const = sec () =>{
+//     console.log('this is second fuinc')
+// }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>This is class stack</h1>
+</body>
+<script>
+    class Stack {
+        item = [];
+        currentsize;
+        maxsize;
+        constructor(size) {
+            this.maxsize = size
+            this.currentsize = this.item.length
+        }
+        push(newval) {
+            if (this.maxsize <= this.currentsize) {
+                alert('full')
+            }
+            else {
+                this.item[this.currentsize] = newval
+                this.currentsize++
+            }
+        }
+        pop() {
+            this.currentsize-=1
+            this.item.length=this.currentsize
+        }
+        dis() {
+            console.log(this.item);
+        }
+
+    }
+    let str = new Stack(5)
+    str.push(10)
+    str.push(130)
+    str.push(20)
+    str.pop()
+    
+    str.dis()
+</script>
+
+</html>

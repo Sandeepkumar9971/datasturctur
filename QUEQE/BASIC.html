@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Queqe Data Structure</h1>
+</body>
+<script>
+    let item = [];
+    let current = item.length
+    let maxli = 5
+
+    const enqueqe = (newvalue) =>{
+        if(maxli>current){
+            item[current]= newvalue
+            current++
+        }
+        else{
+            alert('queqe is full')
+        }
+    }
+
+    const dequeqe = () =>{
+        if(current>0){
+            for(let i=0;i<item.length;i++){
+                item[i]=item[i+1]
+            }
+            current--
+            item.length = current
+        }
+        else{
+            alert('queqe is empty')
+        }
+    }
+
+    enqueqe(10)
+    enqueqe(230)
+    enqueqe(20)
+    dequeqe()
+    dequeqe()
+
+ 
+    console.log(item);
+</script>
+</html>

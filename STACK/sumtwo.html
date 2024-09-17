@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sum two digit</h1>
+</body>
+<script>
+    let data = [1,3,12,3,12,1,2]
+    let temp;
+    let start = 0;
+    let output;
+    const suntwo = (dt,st,end) =>{   
+         temp = dt[st]
+        output = temp+dt[end]
+        console.log(output)
+        if(st<end && end >0){
+           return  suntwo(data,st+1,end-1);
+        }
+    }
+  suntwo(data,start,data.length-1)
+
+</script>
+</html>

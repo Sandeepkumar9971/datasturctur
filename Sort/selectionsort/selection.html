@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Selection sort</h1>
+</body>
+<script>
+    let item = [44,3,20,22,11]
+    const selectionsort = (data) =>{
+        let midid;
+        for(let i =0; i<data.length; i++){
+            midid = i
+            for(let j = i+1;j<data.length;j++){
+            if(data[j]<data[midid]) {
+                midid=j
+            }
+            }
+            
+            let  temp = data[midid];
+            data[midid]=data[i]
+            data[i]=temp
+        }
+    }
+    selectionsort(item)
+    console.log(item);
+
+</script>
+</html>

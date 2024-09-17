@@ -1,0 +1,10 @@
+Queqe is liner type of data struture 
+ex = item = []
+
+queqe me iske 2 side hoti hai front is Rear jaha se data insert hota hai second is back side jaha se data bhr niklta hai
+exaple ke  liye jese mere pass 
+ek item me 5 element hai [1,3,45,6,7]
+
+iske sabse phle 1 bhr niklega or add bhi aage se hoga or niklega bhi front hi
+
+queqe me kafi sare operations hote hai jese ki front,rear,isempty

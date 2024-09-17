@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        This is first topic
+    </h1>
+</body>
+<script>
+const apple = (data) =>{
+    console.log(data);  
+    if(data<10){
+        apple(data+1)
+    }
+
+}
+// const x = 0 
+// apple(x)
+
+// Factorial Cretae 
+const fact = (data) =>{
+    if(data==0){
+        return 1
+    }
+    else{
+       return data*fact(data-1)
+    }
+}
+console.log(fact(3))
+</script>
+</html>

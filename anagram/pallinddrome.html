@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Check this is palindrome</h1>
+</body>
+<script>
+    const palindrome = (string) => {
+        let start = 0
+        let end = string.length - 1
+        while (start < end) {
+            if (string[start] != string[end]) {
+                return false
+            }
+            start++
+            end--
+
+        }
+        return true
+    }
+  console.log(palindrome('lellel'));  
+</script>
+
+</html>

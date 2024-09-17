@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Reverce string with stack</h1>
+</body>
+<script>
+    const data = []
+    let currposition  = data.length
+
+    const pop =()=>{
+        let lastitem = currposition-1
+        currposition-=1
+        data.length=currposition
+        return lastitem
+    }
+    const push = (newvalu) =>{
+        data[currposition]=newvalu  
+        currposition+=1
+    }
+
+    const reverce = (string) =>{
+        let item;
+        for(let i =0;i<string.length;i++){
+            push(string[i])
+        }
+        for(let i =0;i<string.length;i++){
+           item =  string[pop()]
+           console.log(item)
+        }
+
+    }
+    const str='sandeep'
+    const arrstr = str.split('')
+    console.log(arrstr);
+    reverce(arrstr)
+    console.log(data);
+
+</script>
+</html>

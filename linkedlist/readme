@@ -1,0 +1,12 @@
+linklist
+
+linklist me humesha humre pass ek head or tail hoti hai or head humri first node hai or tail humri last node hai 
+humri linklist me value or nextnode ka address hota hai ese hi next node me bhi same value or next node ka address hots hai
+
+ese hi jo humri last node hoti hai usme value or next node null hotu hai usme koi address nhi hota hai
+
+
+leadnode 
+leadnode humri vo node hoti hai jo humri cuurrent node hai uske ek phli ki jo node hai vo uski lead node hai 
+ jese ki mere curren node ki value 200 or next address hai to iska jo bhi isse phle hoga vo uski lead node hogi
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    circular queqe
+</body>
+<script>
+    class circleque {
+        constructor(size) {
+            this.max = size;
+            this.item = new Array(size)
+            this.currentsize = 0;
+            this.front = -1;
+            this.rear = -1;
+        }
+        enqueqe(newval) {
+            if (this.currentsize != this.max) {
+                if (this.rear == this.max) {
+                    this.rear = 0
+                }
+                else {
+                    this.rear++
+                }
+                this.item[this.rear] = newval
+                this.currentsize++
+                if (this.front == -1) {
+                    this.front = this.rear
+                }
+            }
+        }
+        dequeqe() {
+            if (this.currentsize != 0) {
+                this.item[this.front] = null;
+                if (this.front != this.max - 1) {
+                    this.front++
+                }
+                else {
+                    this.front = 0
+                }
+                this.currentsize--;
+            }
+            else {
+                this.front = -1;
+                this.rear = -1;
+                alert('this queqe is empty')
+
+            }
+        }
+
+        display() {
+            console.log(this.item)
+        }
+    }
+
+    const cirque = new circleque(5)
+        cirque.enqueqe(10)
+        cirque.enqueqe(30)
+        cirque.enqueqe(30)
+        cirque.enqueqe(30)
+        // cirque.enqueqe(30)
+        // cirque.enqueqe(30)
+   
+    //     cirque.enqueqe(10)
+    //     cirque.enqueqe(33)
+    //     cirque.enqueqe(333)
+    //     cirque.enqueqe(333)
+    //     cirque.enqueqe(333)
+       console.log(cirque)
+
+    cirque.display()
+</script>
+
+</html>

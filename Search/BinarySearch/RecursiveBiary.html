@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Recursive Binary Search</h1>
+</body>
+<script>
+ let data = [1,2,3,4,11,22,44,55,66]
+ let start = 0;
+ let pos = undefined;
+ let end = data.length-1;
+ let find = 2;
+
+ let rursive = (start,end)=>{
+    let mid = Math.floor((start+end)/2)
+    if(data[mid]==find){
+        pos = mid
+    }
+    else if(data[mid]<find){
+        start = mid+1
+        rursive(start,end)
+    }
+    else{
+        end = mid-1
+        rursive(start,end) 
+    }
+
+ }
+ rursive(start,end)
+ console.log(pos)
+
+</script>
+</html>

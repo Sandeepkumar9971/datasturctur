@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check Anagram</h1>
+</body>
+<script>
+
+const checkanagram = (str1,str2) =>{
+    let object={}
+    if(str1.length===str2.length){
+for(ch of str1){
+    // console.log(object[ch] || 0)
+  
+    object[ch] = (object[ch] || 0) +1
+}
+for(ch of str2){
+   if(!object[ch]){
+    return false
+   }
+    object[ch]--
+    
+    // console.log(object[ch])
+}
+return true
+
+// console.log(object)
+
+    }
+    else{
+        // alert('this is not anagram')
+        return false
+    }
+  
+    
+}
+
+console.log(checkanagram("hello",'ollhe'))
+
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>REcursion</h1>
+    <script>
+        let data = [3,2,1,10,12,22,11,22]
+        let i = 0
+        let temp;
+        
+        const rev = (data,start,end)=>{
+            console.log(data,start,end)
+            temp=data[start]
+            data[start]=data[end]
+            data[end]=temp
+            if(start<=end){
+                rev(data,start+1,end-1)
+            }    
+        }
+        rev(data,i,data.length-1)
+    </script>
+</body>
+</html>

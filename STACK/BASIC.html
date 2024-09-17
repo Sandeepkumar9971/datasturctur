@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- POP AND PUSH METHOD -->
+    pop and push method in stack
+</body>
+<script>
+    let data = []
+    let currensize = data.length
+    let max = 5
+
+    const push = (newval) => { 
+        console.log(max,currensize)
+        if(max>currensize){
+            data[currensize]=newval
+            currensize+=1
+        }
+        else{
+            alert('limit exited')
+        }
+    }
+
+    const pop = () =>{
+        currensize-=1
+        data.length=currensize
+    }
+    push(10)
+    push(11)
+    push(11)
+    push(11)
+    pop()
+    pop()
+    push(11)
+    push(11)
+    // pop(141)
+    // pop(111)
+    // pop(121)
+    // pop(121)
+    // pop(121)
+    // pop(121)
+    console.log(data)
+</script>
+</html>

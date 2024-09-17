@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Check Occuring of string</h2>
+</body>
+<script>
+
+    const stringoccring = (data) => {
+        let str = {}
+        let max = ''
+       let repeattime = 0
+        // console.log(data)
+        for (let i = 0; i < data.length; i++) {
+            str[data[i]] = (str[data[i]] || 0) + 1
+            // console.log(str[data[i]])
+            if (max == '' || str[data[i]] >str[max]) {
+                max = data[i]
+                // repeattime++
+            }
+        }
+        // console.log(str);
+        // console.log(max);
+        console.log(repeattime)
+        return max
+        
+    }
+
+
+    console.log(stringoccring("helloo"));   
+</script>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>This is map method</h1>
+</body>
+<script>
+
+    let map  = new Map()
+
+    const setdata = (key,value) =>{
+        map.set(key,value)
+    }
+
+    setdata(2,100)
+    setdata(34,100)
+    setdata("NAME",["sandeep","AMIT"])
+
+console.log(map)
+console.log(map.size)
+console.log(map.has("NAME"))
+for(x of map){
+    console.log(x)
+}
+    
+</script>
+</html>
